@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy — Playmaker Lax</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --green-dark: #1a3d1e;
+            --green-field: #2e6430;
+            --gold: #b49b5a;
+            --gold-light: #d4c08a;
+            --orange: #eba82a;
+            --white: #f5f0e8;
+            --text: #e8e2d6;
+            --text-muted: #a89e8c;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--green-dark);
+            color: var(--text);
+            line-height: 1.7;
+            min-height: 100vh;
+        }
+
+        /* Subtle field texture overlay */
+        body::before {
+            content: '';
+            position: fixed;
+            inset: 0;
+            background:
+                radial-gradient(ellipse at 20% 50%, rgba(46,100,48,0.3) 0%, transparent 60%),
+                radial-gradient(ellipse at 80% 50%, rgba(46,100,48,0.2) 0%, transparent 60%);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .page { position: relative; z-index: 1; }
+
+        /* Header bar */
+        header {
+            border-bottom: 1px solid rgba(180,155,90,0.15);
+            padding: 1.25rem 2rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            backdrop-filter: blur(12px);
+            background: rgba(26,61,30,0.6);
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            text-decoration: none;
+            color: var(--gold);
+        }
+
+        /* Mini bar chart icon matching InGame Insights logo */
+        .bar-icon {
+            display: flex;
+            align-items: flex-end;
+            gap: 2px;
+            height: 18px;
+        }
+        .bar-icon span {
+            display: block;
+            width: 5px;
+            background: var(--gold);
+            border-radius: 1px;
+        }
+        .bar-icon span:nth-child(1) { height: 7px; }
+        .bar-icon span:nth-child(2) { height: 12px; }
+        .bar-icon span:nth-child(3) { height: 18px; }
+
+        .brand-text {
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+        }
+
+        .brand-sub {
+            font-size: 0.7rem;
+            font-weight: 500;
+            letter-spacing: 0.12em;
+            color: var(--text-muted);
+            text-transform: uppercase;
+        }
+
+        /* Main content */
+        main {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 3rem 2rem 5rem;
+        }
+
+        .page-label {
+            font-size: 0.7rem;
+            font-weight: 600;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 0.75rem;
+        }
+
+        h1 {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--white);
+            margin-bottom: 0.5rem;
+            letter-spacing: -0.01em;
+        }
+
+        .app-name {
+            color: var(--orange);
+        }
+
+        .effective-date {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-bottom: 2.5rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid rgba(180,155,90,0.12);
+        }
+
+        .summary-box {
+            background: rgba(46,100,48,0.35);
+            border: 1px solid rgba(180,155,90,0.15);
+            border-radius: 10px;
+            padding: 1.25rem 1.5rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .summary-box .label {
+            font-size: 0.7rem;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 0.5rem;
+        }
+
+        .summary-box p {
+            font-size: 0.95rem;
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        h2 {
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--gold-light);
+            margin-top: 2.25rem;
+            margin-bottom: 0.75rem;
+        }
+
+        p {
+            margin-bottom: 1rem;
+            font-size: 0.95rem;
+            color: var(--text);
+        }
+
+        a {
+            color: var(--orange);
+            text-decoration: none;
+            border-bottom: 1px solid rgba(235,168,42,0.3);
+            transition: border-color 0.2s;
+        }
+        a:hover { border-color: var(--orange); }
+
+        ul {
+            margin: 0.5rem 0 1rem 1.25rem;
+            font-size: 0.95rem;
+        }
+        li {
+            margin-bottom: 0.4rem;
+            color: var(--text);
+        }
+        li::marker { color: var(--gold); }
+
+        /* Footer */
+        footer {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 2rem 2rem 3rem;
+            border-top: 1px solid rgba(180,155,90,0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+
+        .footer-brand {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        @media (max-width: 600px) {
+            main { padding: 2rem 1.25rem 4rem; }
+            h1 { font-size: 1.6rem; }
+            footer { flex-direction: column; gap: 0.75rem; text-align: center; }
+        }
+    </style>
+</head>
+<body>
+<div class="page">
+    <header>
+        <a class="brand" href="#">
+            <div class="bar-icon"><span></span><span></span><span></span></div>
+            <div>
+                <div class="brand-text">InGame Insights</div>
+                <div class="brand-sub">Playmaker Lax</div>
+            </div>
+        </a>
+    </header>
+
+    <main>
+        <div class="page-label">Legal</div>
+        <h1>Privacy Policy</h1>
+        <p class="effective-date">Effective date: February 7, 2026</p>
+
+        <div class="summary-box">
+            <div class="label">The short version</div>
+            <p>Playmaker Lax does not collect, transmit, or share any personal data. Everything you create stays on your device.</p>
+        </div>
+
+        <h2>About This App</h2>
+        <p><span class="app-name">Playmaker Lax</span> is a lacrosse play-drawing app developed by InGame Insights LLC. It allows coaches and players to design formations, draw player movement paths, and animate plays on a lacrosse field.</p>
+
+        <h2>Data We Collect</h2>
+        <p>None. Playmaker Lax does not collect any personal information or usage data. The app does not require an account, login, or any form of registration.</p>
+
+        <h2>Data Storage</h2>
+        <p>All plays, formation sets, and app preferences are stored locally on your device using standard iOS storage. This data never leaves your device and is not accessible to InGame Insights LLC or any third party.</p>
+
+        <h2>Third-Party Services</h2>
+        <p>Playmaker Lax does not integrate with any third-party analytics, advertising, or tracking services. The app does not contain ads and does not use any third-party SDKs that collect data.</p>
+
+        <h2>Children's Privacy</h2>
+        <p>Because Playmaker Lax does not collect any data, it is safe for users of all ages. We do not knowingly collect personal information from anyone, including children under 13.</p>
+
+        <h2>Changes to This Policy</h2>
+        <p>If we update this privacy policy, we will post the revised version at this URL with a new effective date. Continued use of the app after changes constitutes acceptance of the updated policy.</p>
+
+        <h2>Contact</h2>
+        <p>If you have questions about this privacy policy, contact us at:</p>
+        <p>
+            InGame Insights LLC<br>
+            Email: <a href="mailto:privacy@ingameinsights.com">privacy@ingameinsights.com</a>
+        </p>
+    </main>
+
+    <footer>
+        <div class="footer-brand">
+            <div class="bar-icon"><span></span><span></span><span></span></div>
+            <span>&copy; 2026 InGame Insights LLC</span>
+        </div>
+        <span>Playmaker Lax</span>
+    </footer>
+</div>
+</body>
+</html>
