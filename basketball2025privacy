@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basketball 2025 — Privacy Policy</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #fafaf9;
+            --text: #1c1917;
+            --muted: #57534e;
+            --accent: #c2410c;
+            --border: #e7e5e4;
+            --card-bg: #ffffff;
+            --section-bg: #f5f5f4;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 3rem 1.5rem 5rem;
+        }
+
+        header {
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .app-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: var(--accent);
+            color: white;
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            padding: 0.3rem 0.75rem;
+            border-radius: 4px;
+            margin-bottom: 1rem;
+        }
+
+        h1 {
+            font-size: 2rem;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 0.5rem;
+        }
+
+        .effective-date {
+            color: var(--muted);
+            font-size: 0.95rem;
+        }
+
+        h2 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-top: 2.5rem;
+            margin-bottom: 0.75rem;
+            color: var(--text);
+        }
+
+        p {
+            margin-bottom: 1rem;
+            color: var(--muted);
+        }
+
+        .highlight-card {
+            background: var(--section-bg);
+            border-left: 3px solid var(--accent);
+            padding: 1.25rem 1.5rem;
+            border-radius: 0 8px 8px 0;
+            margin: 1.5rem 0;
+        }
+
+        .highlight-card p {
+            margin-bottom: 0;
+            color: var(--text);
+            font-weight: 500;
+        }
+
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.25rem 0 1.5rem;
+            font-size: 0.92rem;
+        }
+
+        .data-table th {
+            text-align: left;
+            padding: 0.75rem 1rem;
+            background: var(--section-bg);
+            color: var(--text);
+            font-weight: 600;
+            border-bottom: 2px solid var(--border);
+        }
+
+        .data-table td {
+            padding: 0.75rem 1rem;
+            border-bottom: 1px solid var(--border);
+            color: var(--muted);
+            vertical-align: top;
+        }
+
+        .data-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .badge {
+            display: inline-block;
+            font-size: 0.7rem;
+            font-weight: 600;
+            letter-spacing: 0.03em;
+            text-transform: uppercase;
+            padding: 0.15rem 0.5rem;
+            border-radius: 3px;
+            white-space: nowrap;
+        }
+
+        .badge-local {
+            background: #dcfce7;
+            color: #166534;
+        }
+
+        .badge-apple {
+            background: #dbeafe;
+            color: #1e40af;
+        }
+
+        .badge-external {
+            background: #fef3c7;
+            color: #92400e;
+        }
+
+        footer {
+            margin-top: 4rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--border);
+            color: var(--muted);
+            font-size: 0.85rem;
+        }
+
+        footer a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 600px) {
+            .container { padding: 2rem 1.25rem 3rem; }
+            h1 { font-size: 1.6rem; }
+            .data-table { font-size: 0.82rem; }
+            .data-table th, .data-table td { padding: 0.6rem 0.65rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="app-badge">🏀 iOS App</div>
+            <h1>Basketball 2025 — Privacy Policy</h1>
+            <p class="effective-date">Effective Date: March 2, 2026</p>
+        </header>
+
+        <div class="highlight-card">
+            <p>Basketball 2025 is designed with privacy in mind. Your data stays on your device. We do not collect personal information, require accounts, or use third-party analytics.</p>
+        </div>
+
+        <h2>Overview</h2>
+        <p>Basketball 2025 is a basketball statistics tracking app for coaches. It records game events, player statistics, and shooting data to help coaches make better decisions. This policy explains what data the app accesses, how it is used, and your choices.</p>
+
+        <h2>Data We Do Not Collect</h2>
+        <p>We do not collect, store, or transmit any of the following: names, email addresses, phone numbers, location data, device identifiers, usage analytics, advertising data, or any other personal information. There are no user accounts and no sign-in required.</p>
+
+        <h2>Data Stored on Your Device</h2>
+        <p>All game data — rosters, player statistics, game events, season records, and team configurations — is stored locally on your device using Apple's on-device storage frameworks (SwiftData and UserDefaults). This data never leaves your device unless you choose to export or share it.</p>
+
+        <h2>Device Permissions</h2>
+        <p>Basketball 2025 requests the following device permissions, each of which you can grant or deny individually in iOS Settings:</p>
+
+        <table class="data-table">
+            <thead>
+                <tr>
+                    <th>Permission</th>
+                    <th>Purpose</th>
+                    <th>Data Handling</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Microphone</strong></td>
+                    <td>Voice commands for hands-free stat recording during live games</td>
+                    <td><span class="badge badge-apple">Processed by Apple</span></td>
+                </tr>
+                <tr>
+                    <td><strong>Speech Recognition</strong></td>
+                    <td>Converts voice input into text commands (e.g., "number 23 made a three")</td>
+                    <td><span class="badge badge-apple">Processed by Apple</span></td>
+                </tr>
+                <tr>
+                    <td><strong>Local Network</strong></td>
+                    <td>Syncs live game data between nearby devices (e.g., a display iPad for spectators) using MultipeerConnectivity</td>
+                    <td><span class="badge badge-local">Device-to-device only</span></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <p>Audio from voice commands is processed by Apple's Speech Recognition framework and is subject to <a href="https://www.apple.com/privacy/" style="color: var(--accent);">Apple's Privacy Policy</a>. Audio is not stored or recorded by Basketball 2025. Local network communication occurs directly between your devices and does not pass through any external server.</p>
+
+        <h2>Optional Google Sheets Export</h2>
+        <p>The app includes an optional feature to export live play-by-play data to a Google Sheets spreadsheet via Google Apps Script. If you enable this feature, game event data (play type, player numbers, quarter, time, and score) is sent to Google's servers. No personal information is included in this transmission. This feature is entirely opt-in and the app functions fully without it.</p>
+
+        <h2>Data Export &amp; Sharing</h2>
+        <p>You may choose to export game data as files (CSV or JSON) for your own use. Exported files are created on your device and shared only through actions you initiate (e.g., AirDrop, Messages, email). We have no access to exported files.</p>
+
+        <h2>Children's Privacy</h2>
+        <p>Basketball 2025 does not knowingly collect any personal information from anyone, including children under 13. The app does not require accounts, does not collect personal data, and contains no advertising or in-app purchases.</p>
+
+        <h2>Third-Party Services</h2>
+        <p>Basketball 2025 does not include any third-party analytics, advertising frameworks, crash reporting SDKs, or tracking technologies. The only external service interaction is the optional Google Sheets export described above.</p>
+
+        <h2>Data Security</h2>
+        <p>Because your data is stored locally on your device, it is protected by your device's built-in security features, including device passcode, Face ID, or Touch ID. We recommend keeping your device software up to date.</p>
+
+        <h2>Changes to This Policy</h2>
+        <p>If we update this privacy policy, we will post the revised version at this URL with an updated effective date. Continued use of the app after changes constitutes acceptance of the updated policy.</p>
+
+        <h2>Contact</h2>
+        <p>If you have questions about this privacy policy or the app's data practices, please contact us at:</p>
+        <p><strong>Email:</strong> <a href="mailto:support@ingameinsights.com" style="color: var(--accent);">support@ingameinsights.com</a></p>
+
+        <footer>
+            <p>&copy; 2026 Basketball 2025. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>
