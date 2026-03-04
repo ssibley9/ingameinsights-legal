@@ -1,48 +1,291 @@
-# Privacy Policy
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy — PlayBuilder Hoops</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --court-dark: #2a1a0e;
+            --court-mid: #5c3a1e;
+            --court-warm: #7a4e2a;
+            --orange: #e87722;
+            --orange-light: #f59b4a;
+            --gold: #c4952e;
+            --gold-light: #dbb86a;
+            --white: #f5efe6;
+            --text: #ece4d6;
+            --text-muted: #a89880;
+        }
 
-**PlayBuilder Hoops**
-Effective Date: March 4, 2026
+        * { margin: 0; padding: 0; box-sizing: border-box; }
 
-## Introduction
+        body {
+            font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--court-dark);
+            color: var(--text);
+            line-height: 1.7;
+            min-height: 100vh;
+        }
 
-PlayBuilder Hoops ("the App") is developed by Steven Sibley. This privacy policy explains how the App handles your information. The short version: your data stays on your device, and we don't collect any of it.
+        /* Hardcourt wood-grain texture overlay */
+        body::before {
+            content: '';
+            position: fixed;
+            inset: 0;
+            background:
+                repeating-linear-gradient(
+                    90deg,
+                    rgba(92,58,30,0.08) 0px,
+                    rgba(92,58,30,0.03) 2px,
+                    transparent 2px,
+                    transparent 18px,
+                    rgba(92,58,30,0.06) 18px,
+                    rgba(92,58,30,0.02) 20px,
+                    transparent 20px,
+                    transparent 34px
+                ),
+                radial-gradient(ellipse at 30% 40%, rgba(122,78,42,0.25) 0%, transparent 60%),
+                radial-gradient(ellipse at 70% 60%, rgba(92,58,30,0.2) 0%, transparent 55%);
+            pointer-events: none;
+            z-index: 0;
+        }
 
-## Information We Collect
+        .page { position: relative; z-index: 1; }
 
-**We do not collect any personal information.** The App does not require an account, login, email address, or any form of registration. There are no servers, no cloud storage, and no analytics or tracking of any kind.
+        /* Header bar */
+        header {
+            border-bottom: 1px solid rgba(196,149,46,0.15);
+            padding: 1.25rem 2rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            backdrop-filter: blur(12px);
+            background: rgba(42,26,14,0.7);
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
 
-## Data Stored on Your Device
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            text-decoration: none;
+            color: var(--gold);
+            border: none;
+        }
+        .brand:hover { border: none; }
 
-The App stores the following data locally on your device using Apple's SwiftData framework:
+        /* Mini bar chart icon */
+        .bar-icon {
+            display: flex;
+            align-items: flex-end;
+            gap: 2px;
+            height: 18px;
+        }
+        .bar-icon span {
+            display: block;
+            width: 5px;
+            background: var(--gold);
+            border-radius: 1px;
+        }
+        .bar-icon span:nth-child(1) { height: 7px; }
+        .bar-icon span:nth-child(2) { height: 12px; }
+        .bar-icon span:nth-child(3) { height: 18px; }
 
-- **Plays and formations** you create, including player positions, movement paths, passes, annotations, and phase breakpoints
-- **Roster information** you enter, such as player names and jersey numbers
-- **Formation sets** you save for reuse
+        .brand-text {
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+        }
 
-All of this data resides exclusively on your device and is never transmitted to us or any third party.
+        .brand-sub {
+            font-size: 0.7rem;
+            font-weight: 500;
+            letter-spacing: 0.12em;
+            color: var(--text-muted);
+            text-transform: uppercase;
+        }
 
-## Data Sharing and Export
+        /* Main content */
+        main {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 3rem 2rem 5rem;
+        }
 
-The App allows you to export plays and formation sets as JSON files and animated videos. These exports are initiated entirely by you and are shared through Apple's standard share sheet. We have no access to exported files or knowledge of when or how you share them.
+        .page-label {
+            font-size: 0.7rem;
+            font-weight: 600;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--orange);
+            margin-bottom: 0.75rem;
+        }
 
-## Third-Party Services
+        h1 {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--white);
+            margin-bottom: 0.5rem;
+            letter-spacing: -0.01em;
+        }
 
-The App does not integrate with any third-party services, SDKs, analytics platforms, advertising networks, or cloud APIs. There are no network requests made by the App.
+        .app-name {
+            color: var(--orange);
+        }
 
-## Children's Privacy
+        .effective-date {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-bottom: 2.5rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid rgba(196,149,46,0.12);
+        }
 
-The App does not collect personal information from anyone, including children under the age of 13. Because no data is collected or transmitted, the App is compliant with the Children's Online Privacy Protection Act (COPPA) and similar regulations.
+        .summary-box {
+            background: rgba(92,58,30,0.35);
+            border: 1px solid rgba(196,149,46,0.18);
+            border-radius: 10px;
+            padding: 1.25rem 1.5rem;
+            margin-bottom: 2.5rem;
+        }
 
-## Data Retention and Deletion
+        .summary-box .label {
+            font-size: 0.7rem;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--orange);
+            margin-bottom: 0.5rem;
+        }
 
-Since all data is stored locally on your device, you have full control over it. You can delete any play, formation set, or roster entry from within the App at any time. Uninstalling the App removes all associated data from your device.
+        .summary-box p {
+            font-size: 0.95rem;
+            color: var(--text);
+            line-height: 1.6;
+        }
 
-## Changes to This Policy
+        h2 {
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--gold-light);
+            margin-top: 2.25rem;
+            margin-bottom: 0.75rem;
+        }
 
-If this policy is updated, the revised version will be posted with a new effective date. Because the App does not collect contact information, we are unable to notify you directly of changes.
+        p {
+            margin-bottom: 1rem;
+            font-size: 0.95rem;
+            color: var(--text);
+        }
 
-## Contact
+        a {
+            color: var(--orange);
+            text-decoration: none;
+            border-bottom: 1px solid rgba(232,119,34,0.3);
+            transition: border-color 0.2s;
+        }
+        a:hover { border-color: var(--orange); }
 
-If you have questions about this privacy policy, you can reach us at:
+        ul {
+            margin: 0.5rem 0 1rem 1.25rem;
+            font-size: 0.95rem;
+        }
+        li {
+            margin-bottom: 0.4rem;
+            color: var(--text);
+        }
+        li::marker { color: var(--orange); }
 
-**Email:** [support@ingameinsights.com]
+        /* Footer */
+        footer {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 2rem 2rem 3rem;
+            border-top: 1px solid rgba(196,149,46,0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+
+        .footer-brand {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        @media (max-width: 600px) {
+            main { padding: 2rem 1.25rem 4rem; }
+            h1 { font-size: 1.6rem; }
+            footer { flex-direction: column; gap: 0.75rem; text-align: center; }
+        }
+    </style>
+</head>
+<body>
+<div class="page">
+    <header>
+        <a class="brand" href="#">
+            <div class="bar-icon"><span></span><span></span><span></span></div>
+            <div>
+                <div class="brand-text">InGame Insights</div>
+                <div class="brand-sub">PlayBuilder Hoops</div>
+            </div>
+        </a>
+    </header>
+
+    <main>
+        <div class="page-label">Legal</div>
+        <h1>Privacy Policy</h1>
+        <p class="effective-date">Effective date: March 4, 2026</p>
+
+        <div class="summary-box">
+            <div class="label">The short version</div>
+            <p>PlayBuilder Hoops does not collect, transmit, or share any personal data. Everything you create stays on your device.</p>
+        </div>
+
+        <h2>About This App</h2>
+        <p><span class="app-name">PlayBuilder Hoops</span> is a basketball play-drawing app developed by InGame Insights LLC. It allows coaches and players to design formations, draw player movement paths, animate plays, and export video breakdowns on a basketball court.</p>
+
+        <h2>Data We Collect</h2>
+        <p>None. PlayBuilder Hoops does not collect any personal information or usage data. The app does not require an account, login, or any form of registration.</p>
+
+        <h2>Data Storage</h2>
+        <p>All plays, formation sets, roster information, and app preferences are stored locally on your device using standard iOS storage. This data never leaves your device and is not accessible to InGame Insights LLC or any third party.</p>
+
+        <h2>Data Sharing &amp; Export</h2>
+        <p>The app allows you to export plays and formation sets as files and animated videos. These exports are initiated entirely by you and shared through Apple's standard share sheet. We have no access to exported files or knowledge of when or how you share them.</p>
+
+        <h2>Third-Party Services</h2>
+        <p>PlayBuilder Hoops does not integrate with any third-party analytics, advertising, or tracking services. The app does not contain ads and does not use any third-party SDKs that collect data.</p>
+
+        <h2>Children's Privacy</h2>
+        <p>Because PlayBuilder Hoops does not collect any data, it is safe for users of all ages. We do not knowingly collect personal information from anyone, including children under 13.</p>
+
+        <h2>Changes to This Policy</h2>
+        <p>If we update this privacy policy, we will post the revised version at this URL with a new effective date. Continued use of the app after changes constitutes acceptance of the updated policy.</p>
+
+        <h2>Contact</h2>
+        <p>If you have questions about this privacy policy, contact us at:</p>
+        <p>
+            InGame Insights LLC<br>
+            Email: <a href="mailto:support@ingameinsights.com">support@ingameinsights.com</a>
+        </p>
+    </main>
+
+    <footer>
+        <div class="footer-brand">
+            <div class="bar-icon"><span></span><span></span><span></span></div>
+            <span>&copy; 2026 InGame Insights LLC</span>
+        </div>
+        <span>PlayBuilder Hoops</span>
+    </footer>
+</div>
+</body>
+</html>
